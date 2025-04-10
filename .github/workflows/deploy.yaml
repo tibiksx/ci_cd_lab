@@ -22,3 +22,24 @@ jobs:
 
       - name: Compile binary
         run: go build -o myapp
+
+    if: ${{ success() }}
+    needs: [test]
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Install dependencies
+        run: go mod download
+
+    # TODO 01 - Add a step to run tests
+    run: go test ./...
+    # TODO 02 - Make sure that this job is run before `compile`
