@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: webserver
-          image: ghcr.io/tibiksx/ci_cd_lab:latest
+          image: ghcr.io/tibiksx/ci_cd_lab:latst
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
