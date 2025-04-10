@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: <todo-add-your-repository-URL-here>
+    repoURL: https://github.com/tibiksx/ci_cd_lab.git
     targetRevision: HEAD
     path: manifests
   destination:
